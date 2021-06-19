@@ -4,7 +4,9 @@
   - Faça com que o texto do h1 do index.html seja exibido com todas as letras  
     maiúsculas.
 */
+const title = document.querySelector('h1')
 
+title.innerText = title.innerText.toUpperCase()
 
 
 /*
@@ -16,6 +18,13 @@
 
 const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
 
+const ulReference = document.querySelector('.numbers')
+
+let list = ''
+numbers.forEach(number => list += `<li class="number">${number}</li>`)
+
+ulReference.innerHTML = list
+
 /*
   03
 
@@ -23,7 +32,14 @@ const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
     - Se o número é par, ele deve ser exibido na cor "lightblue";
     - Se o número é ímpar, exiba-o na cor "pink".
 */
+const numbersList = document.querySelectorAll('.number')
 
+numbersList.forEach(number => {
+  console.log(Number(number)  )
+  if (Number(number)%2 == 0 ){
+    number.style.color= 'lightblue'
+  }
+})
 
 
 /*
